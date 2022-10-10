@@ -59,4 +59,14 @@ class ValidationManager {
 
         return $validated_string;
     }
+    
+    function get_string_without_html_tags($input_object) {
+        // Required keys for $input_object are string_subject.
+
+        if (isset($input_object->string_subject) == false) {
+            throw new Exception('Error! In function get_secured_string($input_object), required keys for $input_object are string_subject');
+        }
+        
+        return filter_var($input_object->string_subject, FILTER_SANITIZE_STRING);
+    }
 }
