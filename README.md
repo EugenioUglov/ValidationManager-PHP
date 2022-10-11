@@ -3,12 +3,19 @@ It makes easy to use text validation in PHP.<br>
 Each function has been created with one parameter as an object. Inside funcitons are comments with keys of object that can be used for declaring input values.
 
 <h2><b>Usage</b></h2>
+
 Include file:
 
-```require_once('validationmanager.php');```
+```
+require_once('validationmanager.php');
+```
 
-Create object:<br>
-```$validation_manager = new ValidationManager();```
+Create object:
+```
+$validation_manager = new ValidationManager();
+```
 
-Use:<br>
-```$replaced_string = $validation_manager->is_name_valid((object)array('name' => 'Super-Man'));```
+Use:
+```
+$replaced_string = $validation_manager->is_name_valid((object)array('name' => 'Super-Man'));
+```
