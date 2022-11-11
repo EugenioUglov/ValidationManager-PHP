@@ -43,6 +43,16 @@ class ValidationManager {
 
         return false;
     }
+    
+    function is_ip_valid($input_ip) {
+        $ip_address = $input_ip;
+
+        if (filter_var($ip_address, FILTER_VALIDATE_IP)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     function get_secured_string($input_object) {
         // Required keys for $input_object are string_subject.
